@@ -3,7 +3,6 @@ import {ADD_TODO, TOGGLE_TODO} from "../actions/action-type";
 const todos = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
-      console.log(action)
       return [
         ...state,
         {

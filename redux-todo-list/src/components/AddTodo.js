@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class AddTodo extends Component {
 
   handleClick = () => {
+    if (!this.props.text) return
     this.props.addTodo(this.props.text)
   }
   handleChange = (e) => {
