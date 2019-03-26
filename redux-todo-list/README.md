@@ -17,10 +17,10 @@ export const setTodoText = text => ({
   text
 })
 ```
-这个creators函数接收一个text，返回一个`type:SET_TODO_TEXT`的标记以及这个text
+这个creators函数接收一个text，返回一个`type:SET_TODO_TEXT`的标记以及这个text<br/>
 2.在`index.js`中
 ```const store = createStore(rootReducer, applyMiddleware(thunkMiddleware))```
-简单说就是```store(reducer)```，就是管理员和记录本联系在一起
+简单说就是```store(reducer)```，就是管理员和记录本联系在一起<br/>
 3.传入到容器型component中
 ```
 javascript
@@ -29,7 +29,7 @@ const mapDispatchToProps = (dispatch) => ({
   setTodoText: text => dispatch(setTodoText(text)),
 })
 ```
-即调用setTodoText方法会执行一个回调，派发一下action，这个action接收text参数
+即调用setTodoText方法会执行一个回调，派发一下action，这个action接收text参数<br/>
 4.此时store已经和reducer绑定，在第2步时，他会根据这个action的type，以及传入的text返回一个新state
 ```
 javascript
@@ -47,6 +47,7 @@ const text = (state = '', action) => {
 
 export default text
 ```
+<br/>
 5.容器组件同时监听了state
 ```
 javascript
@@ -54,4 +55,4 @@ const mapStateToProps = state => ({
   text: state.text
 })
 ```
-此时会更新state，则输入框中的text会随着输入变化
+此时会更新state，则输入框中的text会随着输入变化<br/>
