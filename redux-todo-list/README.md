@@ -43,8 +43,7 @@ const text = (state = '', action) => {
 }
 
 export default text
-```
-<br/>
+```<br/>
 5.容器组件同时监听了state
 ```
 const mapStateToProps = state => ({
