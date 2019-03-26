@@ -43,11 +43,14 @@ const text = (state = '', action) => {
 }
 
 export default text
-```<br/>
+```
+<br/>
+
 5.容器组件同时监听了state
-```
-const mapStateToProps = state => ({
-  text: state.text
-})
-```
+
+  ```
+  const mapStateToProps = state => ({
+    text: state.text
+  })
+  ```
 此时会更新state，则输入框中的text会随着输入变化<br/>
