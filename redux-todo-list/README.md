@@ -17,10 +17,14 @@ export const setTodoText = text => ({
 })
 ```
 这个creators函数接收一个text，返回一个`type:SET_TODO_TEXT`的标记以及这个text<br/>
+
 2.在`index.js`中
+
 ```const store = createStore(rootReducer, applyMiddleware(thunkMiddleware))```
 简单说就是```store(reducer)```，就是管理员和记录本联系在一起<br/>
+
 3.传入到容器型component中
+
 ```
 //  把store中的action方法映射到组件中的props
 const mapDispatchToProps = (dispatch) => ({
@@ -28,7 +32,9 @@ const mapDispatchToProps = (dispatch) => ({
 })
 ```
 即调用setTodoText方法会执行一个回调，派发一下action，这个action接收text参数<br/>
+
 4.此时store已经和reducer绑定，在第2步时，他会根据这个action的type，以及传入的text返回一个新state
+
 ```
 import {SET_TODO_TEXT} from "../actions/action-type";
 
