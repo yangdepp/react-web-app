@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+// import { setFilter } from '../actions';
 
 class Footer extends Component {
   render() {
