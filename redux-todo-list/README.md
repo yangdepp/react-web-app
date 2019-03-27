@@ -64,8 +64,7 @@ export default text
 此时会更新state，则输入框中的text会随着输入变化<br/>
 
 6.看图
-![avatar](./public/redux-step.jpeg)
 
-
+![avatar](./public/redux-step.jpg)
 
 ###  异步action过程
