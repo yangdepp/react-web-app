@@ -31,9 +31,11 @@ const mapDispatchToProps = (dispatch) => ({
   setTodoText: text => dispatch(setTodoText(text)),
 })
 ```
-即调用setTodoText方法会执行一个回调，派发一下action，这个action接收text参数<br/>
+即调用setTodoText方法会执行一个回调，派发一下action，这个action就是第一步中creators返回的对象，type+text<br/>
 
-4.此时store已经和reducer绑定，在第2步时，他会根据这个action的type，以及传入的text返回一个新state
+4.store接收action动作，参照reducer记录本，返回新的state给组件
+
+在第2步时，此时store已经和reducer绑定，他会根据这个action的type，以及传入的text返回一个新state
 
 ```
 import {SET_TODO_TEXT} from "../actions/action-type";
@@ -60,3 +62,10 @@ export default text
   })
   ```
 此时会更新state，则输入框中的text会随着输入变化<br/>
+
+6.看图
+![avatar](./public/redux-step.jpeg)
+
+
+
+###  异步action过程

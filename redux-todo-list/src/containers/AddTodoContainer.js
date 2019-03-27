@@ -9,7 +9,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   setTodoText: text => dispatch(setTodoText(text)),
   addTodo: text => dispatch(addTodo(text))
-
 })
 
 
