@@ -68,3 +68,93 @@ export default text
 ![avatar](./public/redux-step.jpg)
 
 ###  异步action过程
+
+1.创建action
+
+这个action返回一个函数，因此需要redux-thunk这个中间件
+```
+//  请求开始
+const fetchTodoRequest = () => ({
+  type: FETCH_TODO_REQUEST
+})
+
+//  请求成功
+const fetchTodoSuccess = (data) => ({
+  type: FETCH_TODO_SUCCESS,
+  data
+})
+
+//  请求失败
+const fetchTodoFailure = (error) => ({
+  type: FETCH_TODO_FAILURE,
+  error
+})
+
+export const fetchTodos = () => {
+  return (dispatch) => {
+    dispatch(fetchTodoRequest());
+    return fetch("./mock/todos.json").then(
+      response => {
+        response.json().then(data => {
+          dispatch(fetchTodoSuccess(data));
+        })
+      },
+      error => {
+        dispatch(fetchTodoFailure(error));
+        console.log(error)
+      }
+    )
+  }
+}
+```
+
+2.绑定store(reducer)
+
+3.书写reducer
+
+```
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_TODO_REQUEST:
+      return {
+        ...state,
+        isFecthing: true
+      }
+    case FETCH_TODO_SUCCESS:
+      return {
+        ...state,
+        isFecthing: false,
+        data: action.data
+
+      }
+    case FETCH_TODO_FAILURE:
+      return {
+        ...state,
+        isFecthing: false,
+        error: action.error
+      }
+    default:
+      return {
+        ...state,
+        data: todos(state.data, action)
+      }
+  }
+}
+```
+
+4.组件生命周期中发起dispatch(action)
+
+```
+//  把store中的action方法映射到组件中的props
+const mapDispatchToProps = (dispatch) => ({
+  toggleTodo: id => dispatch(toggleTodo(id)),
+  fetchTodos: () => dispatch(fetchTodos())
+})
+
+```
+
+```
+  componentDidMount() {
+    this.props.fetchTodos();
+  }
+```
