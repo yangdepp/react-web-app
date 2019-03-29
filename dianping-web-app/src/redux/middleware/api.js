@@ -48,7 +48,7 @@ export default store => next => action => {
 }
 
 //  执行网络请求
-const fetchData = (endpoint, schema) {
+const fetchData = (endpoint, schema) => {
   return get(endpoint).then(data => {
     return normalizeData(data, schema)
   })
