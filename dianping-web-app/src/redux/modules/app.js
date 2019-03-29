@@ -6,7 +6,7 @@ export const types = {
   CLEAR_ERROR: "APP/CLEAR_ERROR"
 }
 
-//  action creators
+//action creators
 export const actions = {
   clearError: () => ({
     type: types.CLEAR_ERROR
@@ -16,15 +16,16 @@ export const actions = {
 const reducer = (state = initialState, action) => {
   const { type, error } = action
   if (type === types.CLEAR_ERROR) {
-    return { ...state, error: null }
+    return {...state, error: null}
   } else if (error) {
-    return { ...state, error: error }
+    return {...state, error: error}
   }
   return state;
 }
+
 export default reducer;
 
-//  selectors，从state中取出某一部分的状态
+// selectors
 export const getError = (state) => {
   return state.app.error
 }

@@ -1,8 +1,9 @@
-import { createStore, applyMiddleware } from 'redux'
-import rootReducer from './modules'
-import thunk from 'redux-thunk'
-import api from './middleware/api'
-let store
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import api from "./middleware/api";
+import rootReducer from "./modules";
+
+let store;
 
 if (
   process.env.NODE_ENV !== "production" &&
