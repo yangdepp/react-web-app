@@ -10,7 +10,6 @@ class App extends Component {
     const { error, appActions: { clearError } } = this.props
     return (
       <div className="App">
-      111
         {error && <ErrorToast msg={error} clearError={clearError} />}
       </div>
     );

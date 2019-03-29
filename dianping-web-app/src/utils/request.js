@@ -3,11 +3,6 @@ const headers = new Headers({
   "Content-type": "application/json"
 })
 
-let a = {
-  headers: headers
-}
-console.log(a)
-
 //  对网络请求进行封装
 function get(url) {
   return fetch(url, {
