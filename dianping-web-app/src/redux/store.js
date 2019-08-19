@@ -16,3 +16,4 @@ if (
 }
 
 export default store;
+
