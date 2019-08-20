@@ -1,4 +1,4 @@
-import {ADD_TODO, TOGGLE_TODO, SET_FILTER, SET_TODO_TEXT} from './actionTypes';
+import { ADD_TODO, TOGGLE_TODO, SET_FILTER, SET_TODO_TEXT } from './actionTypes';
 let nextTodoId = 0;
 
 // 新增代办事项

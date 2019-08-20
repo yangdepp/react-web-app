@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Footer extends Component {
   render() {
-    const { filter, setVisibilityFilter } = this.props;
+    const { filter, setFilter: setVisibilityFilter } = this.props;
     return (
       <div>
         <span>Show:</span>
