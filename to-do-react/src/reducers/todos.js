@@ -1,4 +1,43 @@
-import { ADD_TODO, TOGGLE_TODO } from '../actions/actionTypes';
+import {
+  ADD_TODO,
+  TOGGLE_TODO,
+  FETCH_TODOS_FAILUER,
+  FETCH_TODOS_REQUEST,
+  FETCH_TODOS_SUCCESS,
+} from '../actions/actionTypes';
+
+const initState = {
+  isFetching: false,
+  error: null,
+  data: [],
+};
+
+const reducer = (state = initState, action) => {
+  switch (action.type) {
+    case FETCH_TODOS_REQUEST:
+      return {
+        ...state,
+        isFetching: true,
+      };
+    case FETCH_TODOS_SUCCESS:
+      return {
+        ...state,
+        isFetching: false,
+        data: action.data,
+      };
+    case FETCH_TODOS_FAILUER:
+      return {
+        ...state,
+        isFetching: false,
+        data: action.error,
+      };
+    default:
+      return {
+        ...state,
+        data: todos(state.data, action),
+      };
+  }
+};
 
 const todos = (state = [], action) => {
   switch (action.type) {
@@ -24,4 +63,4 @@ const todos = (state = [], action) => {
       return state;
   }
 };
-export default todos;
+export default reducer;
