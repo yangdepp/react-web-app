@@ -15,6 +15,9 @@ class AddTodo extends Component {
   };
 
   handleClick = () => {
+    if (!this.props.text.trim()) {
+      return;
+    }
     this.props.addTodo(this.props.text);
   };
 }
