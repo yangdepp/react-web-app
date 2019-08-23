@@ -1,11 +1,7 @@
 [
   {
     "id": "p-1",
-    "shopIds": [
-      "s-1",
-      "s-1",
-      "s-1"
-    ],
+    "shopIds": ["s-1","s-1","s-1"],
     "shop": "院落创意菜",
     "tag": "免预约",
     "picture": "https://p0.meituan.net/deal/e6864ed9ce87966af11d922d5ef7350532676.jpg.webp@180w_180h_1e_1c_1l_80q|watermark=0",
@@ -16,9 +12,7 @@
   },
   {
     "id": "p-2",
-    "shopIds": [
-      "s-2"
-    ],
+    "shopIds": ["s-2"],
     "shop": "正一味",
     "tag": "免预约",
     "picture": "https://p0.meituan.net/deal/4d32b2d9704fda15aeb5b4dc1d4852e2328759.jpg%40180w_180h_1e_1c_1l_80q%7Cwatermark%3D0",
@@ -29,10 +23,7 @@
   },
   {
     "id": "p-3",
-    "shopIds": [
-      "s-3",
-      "s-3"
-    ],
+    "shopIds": ["s-3","s-3"],
     "shop": "Salud冻酸奶",
     "tag": "免预约",
     "picture": "https://p0.meituan.net/deal/b7935e03809c771e42dfa20784ca6e5228827.jpg.webp@180w_180h_1e_1c_1l_80q|watermark=0",
@@ -43,9 +34,7 @@
   },
   {
     "id": "p-4",
-    "shopIds": [
-      "s-4"
-    ],
+    "shopIds": ["s-4"],
     "shop": "吉野家",
     "tag": "免预约",
     "picture": "https://p0.meituan.net/deal/63a28065fa6f3a7e88271d474e1a721d32912.jpg%40180w_180h_1e_1c_1l_80q%7Cwatermark%3D0",
@@ -56,9 +45,7 @@
   },
   {
     "id": "p-5",
-    "shopIds": [
-      "s-5"
-    ],
+    "shopIds": ["s-5"],
     "shop": "醉面 一碗醉香的肉酱面",
     "tag": "免预约",
     "picture": "https://p1.meituan.net/deal/a5d9800b5879d596100bfa40ca631396114262.jpg.webp@180w_180h_1e_1c_1l_80q|watermark=0",

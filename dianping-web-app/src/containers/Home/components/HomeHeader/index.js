@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import "./style.css"
 
 class HomeHeader extends Component {
@@ -6,14 +7,11 @@ class HomeHeader extends Component {
     return (
       <div className="homeHeader">
         <header className="homeHeader__wrapper">
-          {/*  eslint-disable-next-line */}
-          <a className="homeHeader__city" href="">北京</a>
-          {/*  eslint-disable-next-line */}
-          <a className="homeHeader__search" href="">输入商户名、地点</a>
-          {/*  eslint-disable-next-line */}
-          <a className="homeHeader__self" href="">
-            <div className="homeHeader__portrait" />
-          </a>
+          <a className="homeHeader__city">北京</a>
+          <Link to="/search" className="homeHeader__search">输入商户名、地点</Link>
+          <Link to="/user" className="homeHeader__self">
+            <div className="homeHeader__portrait"/>
+          </Link>
         </header>
       </div>
     );

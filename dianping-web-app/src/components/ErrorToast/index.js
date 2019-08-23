@@ -6,7 +6,7 @@ class ErrorToast extends Component {
     const { msg } = this.props
     return (
       <div className="errorToast">
-        <div className="errorToast_text">
+        <div className="errorToast__text">
           {msg}
         </div>
       </div>

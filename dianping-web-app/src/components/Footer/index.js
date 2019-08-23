@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './style.css'
 
 class Footer extends Component {
-  render() {
+  render () {
     return (
       <footer className='footer'>
         <a className='footer__link' href="https://m.dianping.com/nmy/myinfo">
@@ -20,7 +20,7 @@ class Footer extends Component {
         <a className='footer__link' href="https://m.dianping.com/nmy/myinfo">
           意见反馈
         </a>
-        <br />
+        <br/>
         <a className='footer__link' href="https://m.dianping.com/nmy/myinfo">
           美团网
         </a>
@@ -48,7 +48,7 @@ class Footer extends Component {
         <a className='footer__link' href="https://m.dianping.com/nmy/myinfo">
           教育
         </a>
-        <br />
+        <br/>
         <a className='footer__link' href="https://m.dianping.com/nmy/myinfo">
           电脑版
         </a>
@@ -57,7 +57,7 @@ class Footer extends Component {
           客户端
         </a>
         <em className="footer__seperator">|</em>
-        <br />
+        <br/>
         <p className="footer__copyright">copyright ©2018 dianping.com</p>
       </footer>
     )
