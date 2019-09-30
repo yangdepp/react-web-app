@@ -81,16 +81,28 @@ function Hooks(props) {
   useEffect(() => {
     document.title = count;
   });
+  const onClick = () => {
+    console.log('click');
+  };
+  useEffect(() => {
+    document.querySelector('#size').addEventListener('click', onClick, false);
+  }, [count]);
 
   return (
     <div>
       <button type="button" onClick={() => setCount(count + 1)}>
         click
       </button>
+      {count % 2 ? (
+        <span id="size">
+          size: {size.width} x {size.height}
+        </span>
+      ) : (
+        <p id="size">
+          size: {size.width} x {size.height}
+        </p>
+      )}
       <p>{count}</p>
-      <p>
-        size: {size.width} x {size.height}
-      </p>
     </div>
   );
 }
